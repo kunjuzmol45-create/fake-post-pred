@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fake Job Post Prediction using Machine Learning</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../static/css/preformance.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="display-5 text-secondary m-0"> Fake Job Prediction</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="{{url_for('index')}}" class="nav-item nav-link">Home</a>
+                        <a href="{{url_for('upload_image')}}" class="nav-item nav-link">Image Upload</a>
+                        <a href="{{url_for('performance')}}" class="nav-item nav-link active">Performance Analysis</a>
+                        <a href="{{url_for('chart')}}" class="nav-item nav-link">Chart</a>
+                        <a href="{{url_for('logout')}}" class="nav-item nav-link">Logout</a>
+                    </div>
+                   
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Fake Job Post Prediction</h1>
+                <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                  
+                    <li class="breadcrumb-item active text-secondary">Performance Analysis</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Countries We Offer Start -->
+        <div class="container-fluid country overflow-hidden py-5">
+            <div class="container py-5">
+                <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
+                    <div class="sub-style">
+                        <h5 class="sub-title text-primary px-3">Performance Analysis</h5>
+                    </div>
+                    <h1 class="display-5 mb-4">Fake Job Post Prediction</h1>
+                    
+                </div>
+                 
+                <br><br>
+                <div style="text-align: center; color: yellowgreen;">
+                    <h1>Performance Analysis of MLP Classifier </h1>
+                     
+      
+                </div>
+                <br>
+                <table style="width: 50%; margin: auto; font-size: 20px; text-align: center; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid black; padding: 10px;">Class</th>
+                                 <th style="border: 1px solid black; padding: 10px;">Precision</th>
+                            <th style="border: 1px solid black; padding: 10px;">Recall</th>
+                            <th style="border: 1px solid black; padding: 10px;">F1</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid black; padding: 10px;">Legitimate</td>
+                            <td style="border: 1px solid black; padding: 10px;">1.00</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.99</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; padding: 10px;">Fraudulent</td>
+                           <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                            <td style="border: 1px solid black; padding: 10px;">1.00</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.99</td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+                
+                <br><br>
+                
+               
+                
+               </div>  
+                </br>
+               </br>
+               </br>
+               
+               
+               <div class="col-lg-8 mx-auto">
+                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                           
+                                      
+                                      <center><h1>Confusion Matrix of MLP Classifier </h1></center>
+                                     </br>
+                                     </br>
+                                     
+                               <center>	    <div><img style="margin-left:10px;width:800px;height:500px;" src="../static/output.png"</div></center>
+                                              
+                                        
+                                              
+                       </div>
+               
+               
+                
+               </body>
+                               
+               <br>
+               <br>
+               <br>
+               <br>
+                
+               <body>
+                <div style="text-align: center; color: yellowgreen;">
+				 <h1>Performance Analysis of Passive Aggressive Classifier </h1>
+                    
+                     
+      
+                </div>
+                
+                <br><br>
+                
+                
+                
+                <br><br>
+                
+                 <table style="width: 50%; margin: auto; font-size: 20px; text-align: center; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid black; padding: 10px;">Class</th>
+                                 <th style="border: 1px solid black; padding: 10px;">Precision</th>
+                            <th style="border: 1px solid black; padding: 10px;">Recall</th>
+                            <th style="border: 1px solid black; padding: 10px;">F1</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid black; padding: 10px;">Legitimate</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; padding: 10px;">Fraudulent</td>
+                           <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.98</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <br><br>
+                
+               
+                
+               </div>  
+                </br>
+               </br>
+               </br>
+               
+               
+               <div class="col-lg-8 mx-auto">
+                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                           
+                                      
+                                     
+									 <center><h1>Confusion Matrix of Passive Aggressive Classifier </h1></center>
+                                     </br>
+                                     </br>
+                                     
+                               <center>	    <div><img style="margin-left:10px;width:800px;height:500px;" src="../static/output1.png"</div></center>
+                                              
+                                        
+                                              
+                       </div>
+               
+               
+                
+               </body>
+              
+               
+      
+      
+               <br>
+               <br>
+               <br>
+               <br>
+                
+               <body>
+                <div style="text-align: center; color: yellowgreen;">
+				<h1>Performance Analysis of Gradient Boosting Classifier </h1>
+                    
+                     
+      
+                </div>
+                
+                <br><br>
+                
+                
+                
+                <br><br>
+                
+               <table style="width: 50%; margin: auto; font-size: 20px; text-align: center; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid black; padding: 10px;">Class</th>
+                                 <th style="border: 1px solid black; padding: 10px;">Precision</th>
+                            <th style="border: 1px solid black; padding: 10px;">Recall</th>
+                            <th style="border: 1px solid black; padding: 10px;">F1</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid black; padding: 10px;">Legitimate</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.94</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.90</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.92</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; padding: 10px;">Fraudulent</td>
+                           <td style="border: 1px solid black; padding: 10px;">0.90</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.94</td>
+                            <td style="border: 1px solid black; padding: 10px;">0.92</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+                
+               
+                
+               </div>  
+                </br>
+               </br>
+               </br>
+               
+               
+               <div class="col-lg-8 mx-auto">
+                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                           
+                                      
+                                     <center><h1>Confusion Matrix of Gradient Boosting Classifier </h1></center>
+                                     </br>
+                                     </br>
+                                     
+                               <center>	    <div><img style="margin-left:10px;width:800px;height:500px;" src="../static/output2.png"</div></center>
+                                              
+                                        
+                                              
+                       </div>
+               
+               
+                
+               </body>
+      
+               
+               
+
+
+
+               
+            </div>
+        </div>
+       
+       <!-- Footer Start -->
+       <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+     
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/wow/wow.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/counterup/counterup.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+    </body>
+
+</html>

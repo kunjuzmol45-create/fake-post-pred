@@ -1,0 +1,25 @@
+Fake Job Post Prediction
+ 
+*****************************************************
+Algorithm / Model Used: MLP Classifier.
+
+Accuracy Train Score: 99%. 
+Accuracy Test Score: 98%.
+*****************************************************
+Algorithm / Model Used: Passive Aggressive Classifier.
+
+Accuracy Train Score: 98%.
+Accuracy Test Score: 97%.
+*****************************************************
+Algorithm / Model Used: Gradient Boosting Classifier.
+
+Accuracy Train Score: 92%.
+Accuracy Test Score: 91%.
+*****************************************************
+Realtime Prediction using Text processing Prediction:
+
+Algorithm / Model Used: K-Neighbors Classifier
+
+Overall Accuracy Score: 96%.
+*****************************************************
+ 

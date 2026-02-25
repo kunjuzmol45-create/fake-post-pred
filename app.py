@@ -21,11 +21,13 @@ from io import BytesIO
 #   2. Run installer
 #   3. Uncomment the line below and update the path if needed:
 import sys
-tesseract_path = r'C:\Program Files\Tesseract-OCR'
-pytesseract.pytesseract.pytesseract_cmd = tesseract_path + r'\tesseract.exe'
-# Also add to PATH so it can find DLL dependencies
-if tesseract_path not in os.environ.get('PATH', ''):
-    os.environ['PATH'] += os.pathsep + tesseract_path
+import platform
+if platform.system() == 'Windows':
+    tesseract_path = r'C:\Program Files\Tesseract-OCR'
+    pytesseract.pytesseract.pytesseract_cmd = tesseract_path + r'\tesseract.exe'
+    # Also add to PATH so it can find DLL dependencies
+    if tesseract_path not in os.environ.get('PATH', ''):
+        os.environ['PATH'] += os.pathsep + tesseract_path
 # 
 # For macOS: brew install tesseract
 # For Linux: sudo apt-get install tesseract-ocr
@@ -36,8 +38,7 @@ try:
     print("✅ Tesseract OCR found and working!")
 except Exception as e:
     print(f"⚠️  Warning: Tesseract OCR not accessible: {e}")
-    print(f"   Tesseract path: {tesseract_path}")
-    print(f"   Checking if exe exists: {os.path.exists(tesseract_path + r'/tesseract.exe')}")
+    print(f"   Tesseract path: {pytesseract.pytesseract.pytesseract_cmd}")
     print("   Image upload features will not work. Please ensure Tesseract is installed.")
 
 
